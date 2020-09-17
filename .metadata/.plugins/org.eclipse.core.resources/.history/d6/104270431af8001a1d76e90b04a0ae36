@@ -1,0 +1,17 @@
+package stepDefinitions;
+
+import cucumber.TestContext;
+import pageObject.ShoppingCartSummaryPage;
+
+public class ShoppingCartSummarySteps {
+	
+	TestContext testContext;
+	ShoppingCartSummaryPage shoppingCartSummaryPage;
+
+	public ShoppingCartSummarySteps(TestContext context) {
+		testContext = context;
+		shoppingCartSummaryPage = testContext.getPageObjectManager().getShoppingCartSummaryPage();
+	}
+
+
+}

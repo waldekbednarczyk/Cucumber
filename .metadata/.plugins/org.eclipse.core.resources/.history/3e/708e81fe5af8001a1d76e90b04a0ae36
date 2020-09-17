@@ -1,0 +1,23 @@
+package stepDefinitions;
+
+import cucumber.TestContext;
+import io.cucumber.java.en.When;
+import io.cucumber.messages.internal.com.google.gson.annotations.Since;
+import pageObject.SignInPage;
+
+public class SignInSteps {
+	
+	TestContext testContext;
+	SignInPage signInPage;
+
+	public SignInSteps(TestContext context) {
+		testContext = context;
+		signInPage = testContext.getPageObjectManager().getSignInPage();
+	}
+	
+	@When("enter email to create an account")
+	public void enter_email_to_create_an_account() {
+	    signInPage.enter_RandomEmailAddresCreateAccount();
+	}
+
+}

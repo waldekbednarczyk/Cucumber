@@ -1,0 +1,22 @@
+package stepDefinitions;
+
+import cucumber.TestContext;
+import io.cucumber.java.en.Given;
+import pageObject.GooglePage;
+
+public class GoogleSteps {
+	
+	TestContext testContext;
+	GooglePage googlePage;
+
+	public GoogleSteps(TestContext context) {
+		testContext = context;
+		googlePage = testContext.getPageObjectManager().getGooglePage();
+	}
+	
+	@Given("user is on Google search page")
+	public void user_is_on_google_search_page() {
+	    googlePage.navigateTo_GooglePage();
+	}
+
+}

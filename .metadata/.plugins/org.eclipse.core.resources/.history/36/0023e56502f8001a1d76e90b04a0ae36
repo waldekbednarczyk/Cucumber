@@ -1,0 +1,7 @@
+driverPath=C:\\Users\\p_smandzich\\Desktop\\Cucumber\\ChromeDriver\\chromedriver.exe
+implicitlywait=10
+url=http://automationpractice.com/index.php
+urlGoogle=http://google.com
+enviroment=local
+browser=chrome
+windowMaximize=true

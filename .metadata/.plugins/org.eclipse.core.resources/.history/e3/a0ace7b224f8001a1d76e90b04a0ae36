@@ -1,0 +1,17 @@
+package stepDefinitions;
+
+import cucumber.TestContext;
+import pageObject.ContactUsPage;
+import pageObject.HomePage;
+
+public class ContactUsSteps {
+	
+	TestContext testContext;
+	ContactUsPage contactUsPage;
+
+	public ContactUsSteps(TestContext context) {
+		testContext = context;
+		contactUsPage = testContext.getPageObjectManager().getContactUsPage();
+	}
+
+}

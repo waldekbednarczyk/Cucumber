@@ -1,0 +1,32 @@
+package managers;
+
+import org.openqa.selenium.WebDriver;
+
+import pageObject.GooglePage;
+import pageObject.HomePage;
+import pageObject.WomenPage;
+
+public class PageObjectManager {
+	
+	private WebDriver driver;
+	private HomePage homePage;
+	private GooglePage googlePage;
+	private WomenPage womenPage;
+	
+	public PageObjectManager(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	public HomePage getHomePage() {
+		return(homePage == null) ? homePage = new HomePage(driver) : homePage;
+	}
+	
+	public GooglePage getGooglePage() {
+		return(googlePage == null) ? googlePage = new GooglePage(driver) : googlePage;
+	}
+	
+	public WomenPage getWomenPage() {
+		return(womenPage == null) ? womenPage = new WomenPage(driver) : womenPage;
+	}
+
+}

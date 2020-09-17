@@ -1,0 +1,61 @@
+package stepDefinitions;
+
+import cucumber.TestContext;
+import enums.Context;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pageObject.SignInPage;
+
+public class SignInSteps {
+	
+	TestContext testContext;
+	SignInPage signInPage;
+
+	public SignInSteps(TestContext context) {
+		testContext = context;
+		signInPage = testContext.getPageObjectManager().getSignInPage();
+	}
+	
+	@When("enter email to create an account")
+	public void enter_email_to_create_an_account() {
+		String randomEmial = signInPage.getSaltString();
+		testContext.scenarioContext.setContext(Context.EMAIL, randomEmial);
+		signInPage.enter_RandomEmailAddresCreateAccount(randomEmial);
+	}
+	
+	@When("click Create an account")
+	public void click_create_an_account() {
+	    signInPage.click_CreateAnAccount();
+	}
+	
+	@When("enter informations to create a account")
+	public void enter_informations_to_create_a_account() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("click register")
+	public void click_register() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("the sign in confirmation message is displayed")
+	public void the_sign_in_confirmation_message_is_displayed() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("click logout")
+	public void click_logout() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("sign in with new accout details")
+	public void sign_in_with_new_accout_details() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+}

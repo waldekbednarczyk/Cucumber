@@ -1,0 +1,44 @@
+Feature: SOFLAB TA Framework training
+
+
+  #Scenario: Social media icons displayed
+    #Given user is on Home Page
+    #When scroll to the footer
+    #Then Facebook icon is displayed
+    #And Twitter icon is displayed
+    #And Google icon is displayed
+    #And Youtube icon is displayed
+ 
+
+#	Scenario: Google search and subcategories availability
+#		Given user is on Google search page
+#		When accept cookies
+#		And search for "automationpractice"
+#		Then automationpractice website found
+#		When enter the automationpractice website
+#		And enter the Women category
+#		Then TOPS subcategory is available
+#		And DRESSES subcategory is available
+
+
+#	Scenario: Item price and total price correct
+#		Given user is on Home Page
+#		When add to cart Blouse item
+#		Then verify the item price
+#		And verify the total price
+
+
+	Scenario Outline: Verify + and - buttons
+    Given user is on Home Page
+    When add to cart Blouse item
+    And proceed to checkout
+    And click the + button <plus> times
+    And lick the - button <minus> times
+    Then the total price is <price>
+    
+    Examples:
+    | plus | minus | price |
+    | 1    | 1     |$27.00 |
+    | 2    | 1     |$54.00 |
+ 
+	

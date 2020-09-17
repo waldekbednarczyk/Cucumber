@@ -1,0 +1,29 @@
+package pageObject;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class SignInPage {
+	
+	WebDriver driver;
+
+	public SignInPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(id = "email_create")
+	WebElement txtbx_EmailAddresCreateAccount;
+	@FindBy(id = "SubmitCreate")
+	WebElement btn_CreateAnAccount;
+	@FindBy(id = "email")
+	WebElement txtbx_EmailAddresSignIn;
+	@FindBy(id = "passwd")
+	WebElement txtbx_Password;
+	@FindBy(css = "[name='SubmitLogin']")
+	WebElement btn_SignIn;
+	
+
+}

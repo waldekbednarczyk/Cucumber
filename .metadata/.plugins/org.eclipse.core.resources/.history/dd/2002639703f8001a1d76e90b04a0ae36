@@ -1,0 +1,37 @@
+package pageObject;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import managers.FileReaderManager;
+
+
+public class GooglePage {
+	
+	WebDriver driver;
+
+	public GooglePage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(css = "[name='q']")
+	WebElement txtbx_search;
+	@FindBy(xpath = "//span[contains(text(),'Zgadzam się')]")
+	WebElement zgadzamSie;
+	
+	public void navigateTo_GooglePage() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getGoogleUrl());
+	}
+	
+	public void acceptCookies() throws InterruptedException {
+		Thread.sleep(3000);
+		zgadzamSie.click();
+	}
+	
+	
+
+}

@@ -1,0 +1,16 @@
+package stepDefinitions;
+
+import cucumber.TestContext;
+import pageObject.HomePage;
+
+public class HomeSteps {
+	
+	TestContext testContext;
+	HomePage homePage;
+	
+	public HomeSteps(TestContext context) {
+		testContext = context;
+		homePage = testContext.getPageObjectManager().getHomePage();
+	}
+
+}

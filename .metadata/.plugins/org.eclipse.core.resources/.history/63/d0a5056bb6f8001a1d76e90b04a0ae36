@@ -1,0 +1,69 @@
+package pageObject;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class CreateAnAccountPage {
+	
+	WebDriver driver;
+
+	public CreateAnAccountPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(id = "id_gender1")
+	WebElement rd_Mr;
+	@FindBy(id = "customer_firstname")
+	WebElement txtbx_FirstName;
+	@FindBy(id = "customer_lastname")
+	WebElement txtbx_LastName;
+	@FindBy(id = "email")
+	WebElement txtbx_Emial;
+	@FindBy(id = "passwd")
+	WebElement txtbx_Password;
+	@FindBy(id = "days")
+	WebElement drpdwn_Days;
+	@FindBy(id = "months")
+	WebElement drpdwn_Months;
+	@FindBy(id = "years")
+	WebElement drpdwn_Years;
+	@FindBy(id = "newsletter")
+	WebElement chkbx_Newsletter;
+	@FindBy(id = "optin")
+	WebElement chkbx_SpecialOfferts;
+	@FindBy(id = "firstname")
+	WebElement txtbx_FirstNameAddress;
+	@FindBy(id = "lastname")
+	WebElement txtbx_LastNameAddress;
+	@FindBy(id = "company")
+	WebElement txtbx_Company;
+	@FindBy(id = "address1")
+	WebElement txtbx_AddresLine1;
+	@FindBy(id = "address2")
+	WebElement txtbx_AddresLine2;
+	@FindBy(id = "city")
+	WebElement txtbx_City;
+	@FindBy(id = "id_state")
+	WebElement drpdwn_State;
+	@FindBy(id = "postcode")
+	WebElement txtbx_Zip;
+	@FindBy(id = "id_country")
+	WebElement drpdwn_Country;
+	@FindBy(id = "other")
+	WebElement txtbx_AdditionalInformation;
+	@FindBy(id = "phone")
+	WebElement txtbx_HomePhone;
+	@FindBy(id = "phone_mobile")
+	WebElement txtbx_MobilePhone;
+	@FindBy(id = "alias")
+	WebElement txtbx_Alias;
+	@FindBy(id = "submitAccount")
+	WebElement btn_Register;
+	@FindBy(css = ".info-account")
+	WebElement createAccontConfirmation;
+	@FindBy(css = ".logout")
+	WebElement btn_SignOut;
+}

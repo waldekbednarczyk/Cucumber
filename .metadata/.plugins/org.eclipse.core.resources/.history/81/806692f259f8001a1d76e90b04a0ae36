@@ -1,0 +1,38 @@
+package cucumber;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.naming.Context;
+
+public class ScenarioContext {
+	
+	private Map<String, Object> scenarioContext;
+
+	public ScenarioContext() {
+		scenarioContext = new HashMap<>();
+	}
+
+	public void setContext(Context key, Object value) {
+		scenarioContext.put(key.toString(), value);
+	}
+	
+
+	public Object getContext(Context key) {
+		return scenarioContext.get(key.toString());
+	}
+	
+	public Object getContext(enums.Context email) {
+		return scenarioContext.get(email.toString());
+	}
+
+	public Boolean isContains(Context key) {
+		return scenarioContext.containsKey(key.toString());
+	}
+
+	public void setContext(enums.Context email, String value) {
+		scenarioContext.put(email.toString(), value);
+		
+	}
+
+}

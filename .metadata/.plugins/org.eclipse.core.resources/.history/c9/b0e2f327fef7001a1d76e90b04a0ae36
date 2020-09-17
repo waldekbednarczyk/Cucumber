@@ -1,0 +1,16 @@
+package stepDefinitions;
+
+import cucumber.TestContext;
+import pageObject.GooglePage;
+
+public class GoogleSteps {
+	
+	TestContext testContext;
+	GooglePage googlePage;
+
+	public GoogleSteps(TestContext context) {
+		testContext = context;
+		googlePage = testContext.getPageObjectManager().getGooglePage();
+	}
+
+}

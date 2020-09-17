@@ -1,0 +1,13 @@
+Feature: SOFLAB TA Framework training
+
+
+
+  Scenario: Social media icons displayed
+    Given user is on Home Page
+    When scroll to the footer
+    Then Facebook icon is displayed
+    And Twitter icon is displayed
+    And Google icon is displayed
+    And Youtube icon is displayed
+ 
+

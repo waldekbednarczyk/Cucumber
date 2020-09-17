@@ -1,0 +1,16 @@
+package stepDefinitions;
+
+import cucumber.TestContext;
+import pageObject.CreateAnAccountPage;
+
+public class CreateAnAccountSteps {
+	
+	TestContext testContext;
+	CreateAnAccountPage createAnAccountPage;
+
+	public CreateAnAccountSteps(TestContext context) {
+		testContext = context;
+		createAnAccountPage = testContext.getPageObjectManager().getCreateAnAccountPage();
+	}
+
+}

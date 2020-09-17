@@ -1,0 +1,16 @@
+package stepDefinitions;
+
+import cucumber.TestContext;
+import pageObject.SignInPage;
+
+public class SignInSteps {
+	
+	TestContext testContext;
+	SignInPage signInPage;
+
+	public SignInSteps(TestContext context) {
+		testContext = context;
+		signInPage = testContext.getPageObjectManager().getSignInPage();
+	}
+
+}

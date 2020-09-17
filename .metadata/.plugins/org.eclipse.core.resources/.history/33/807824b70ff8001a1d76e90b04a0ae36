@@ -1,0 +1,57 @@
+package stepDefinitions;
+
+import org.junit.Assert;
+
+import cucumber.TestContext;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+import pageObject.HomePage;
+
+public class HomeSteps {
+
+	TestContext testContext;
+	HomePage homePage;
+
+	public HomeSteps(TestContext context) {
+		testContext = context;
+		homePage = testContext.getPageObjectManager().getHomePage();
+	}
+
+	@Given("user is on Home Page")
+	public void user_is_on_home_page() {
+		homePage.navigateTo_HomePage();
+	}
+
+	@When("scroll to the footer")
+	public void scroll_to_the_footer() {
+		homePage.scrollToFooter();
+	}
+
+	@Then("Facebook icon is displayed")
+	public void facebook_icon_is_displayed() {
+		Assert.assertEquals(true, homePage.isDisplayed_Facebook());
+	}
+
+	@Then("Twitter icon is displayed")
+	public void twitter_icon_is_displayed() {
+		Assert.assertEquals(true, homePage.isDisplayed_Twitter());
+	}
+
+	@Then("Google icon is displayed")
+	public void google_icon_is_displayed() {
+		Assert.assertEquals(true, homePage.isDisplayed_GooglePlus());
+	}
+
+	@Then("Youtube icon is displayed")
+	public void youtube_icon_is_displayed() {
+		Assert.assertEquals(true, homePage.isDisplayed_Youtube());
+	}
+	
+	@When("enter the Women category")
+	public void enter_the_women_category() {
+		homePage.click_Women();
+	}
+
+}

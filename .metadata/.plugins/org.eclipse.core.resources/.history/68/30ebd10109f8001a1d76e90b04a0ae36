@@ -1,0 +1,16 @@
+package stepDefinitions;
+
+import cucumber.TestContext;
+import pageObject.WomenPage;
+
+public class WomenSteps {
+	
+	TestContext testContext;
+	WomenPage womenPage;
+	
+	public WomenSteps(TestContext context) {
+		testContext = context;
+		womenPage = testContext.getPageObjectManager().getWomenPage();
+	}
+
+}

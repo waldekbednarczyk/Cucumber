@@ -1,0 +1,20 @@
+Feature: SOFLAB TA Framework training
+
+
+  #Scenario: Social media icons displayed
+    #Given user is on Home Page
+    #When scroll to the footer
+    #Then Facebook icon is displayed
+    #And Twitter icon is displayed
+    #And Google icon is displayed
+    #And Youtube icon is displayed
+ 
+
+	Scenario: Google search and subcategories availability
+		Given user is on Google search page
+		When search for "automationpractice"
+		Then automationpractice website found
+		When enter the automationpractice website
+		And enter the Women category
+		Then TOPS subcategory is available
+		And DRESSES subcategory is available

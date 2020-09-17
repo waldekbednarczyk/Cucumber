@@ -1,0 +1,51 @@
+package pageObject;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import managers.FileReaderManager;
+
+public class GooglePage {
+
+	WebDriver driver;
+
+	public GooglePage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+
+	@FindBy(css = "[name='q']")
+	WebElement txtbx_search;
+	@FindBy(css = ".FPdoLc [value='Szukaj w Google']")
+	WebElement szukajWGoogle;
+	@FindBy(css = "[href='http://automationpractice.com/'] h3")
+	WebElement automationpracticeLink;
+
+	public void navigateTo_GooglePage() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getGoogleUrl());
+	}
+
+	public void acceptCookies() throws InterruptedException, AWTException {
+		Thread.sleep(3000);
+		Robot robot = new Robot();
+		for (int i = 0; i < 6; i++) {
+			robot.keyPress(KeyEvent.VK_TAB);
+		}
+		robot.keyPress(KeyEvent.VK_ENTER);
+	}
+	
+	public void enter_Search(String txt_Search) {
+		txtbx_search.sendKeys(txt_Search);
+	}
+	
+	public boolean isDisplayed_AutomationpracticeLink() {
+		return automationpracticeLink.isDisplayed();
+	}
+
+}

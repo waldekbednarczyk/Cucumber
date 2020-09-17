@@ -1,0 +1,60 @@
+package stepDefinitions;
+
+import cucumber.TestContext;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pageObject.ContactUsPage;
+
+public class ContactUsSteps {
+	
+	TestContext testContext;
+	ContactUsPage contactUsPage;
+
+	public ContactUsSteps(TestContext context) {
+		testContext = context;
+		contactUsPage = testContext.getPageObjectManager().getContactUsPage();
+	}
+	
+	@When("select {string} from Subject Heading")
+	public void select_from_subject_heading(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("enter {string} Email address")
+	public void enter_email_address(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("enter {string} Order reference")
+	public void enter_order_reference(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("Attach a file")
+	public void attach_a_file() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("enter {string} message")
+	public void enter_message(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("click Send")
+	public void click_send() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("the confirmation message is displayed")
+	public void the_confirmation_message_is_displayed() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+}

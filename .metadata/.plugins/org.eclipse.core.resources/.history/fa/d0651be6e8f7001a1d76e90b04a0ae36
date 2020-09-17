@@ -1,0 +1,50 @@
+package managers;
+
+import org.openqa.selenium.WebDriver;
+
+import pageObject.CartPage;
+import pageObject.CheckoutPage;
+import pageObject.ConfirmationPage;
+import pageObject.HomePage;
+import pageObject.ProductListingPage;
+import pageObject.ProductPage;
+
+public class PageObjectManager {
+	
+	private WebDriver driver;
+	private CartPage cartPage;
+	private CheckoutPage checkoutPage;
+	private HomePage homePage;
+	private ProductListingPage productListingPage;
+	private ProductPage productPage;
+	private ConfirmationPage confirmationPage;
+	
+	public PageObjectManager(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	public CartPage getCardPage() {
+		return(cartPage == null) ? cartPage = new CartPage(driver) : cartPage;
+	}
+	
+	public CheckoutPage getCheckoutPage() {
+		return(checkoutPage == null) ? checkoutPage = new CheckoutPage(driver) : checkoutPage;
+	}
+	
+	public HomePage getHomePage() {
+		return(homePage == null) ? homePage = new HomePage(driver) : homePage;
+	}
+	
+	public ProductListingPage getProductListingPage() {
+		return(productListingPage == null) ? productListingPage = new ProductListingPage(driver) : productListingPage;
+	}
+	
+	public ProductPage getProductPage() {
+		return(productPage == null) ? productPage = new ProductPage(driver) : productPage;
+	}
+	
+	public ConfirmationPage getConfirmationPage() {
+		 return (confirmationPage == null) ? confirmationPage = new ConfirmationPage(driver) : confirmationPage;
+		 }
+
+}
