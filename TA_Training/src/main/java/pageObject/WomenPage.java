@@ -14,6 +14,7 @@ public class WomenPage {
 		PageFactory.initElements(driver, this);
 	}
 
+	// i'm not sure whether using whole url as locator is a great idea
 	@FindBy(css = "h5 [href='http://automationpractice.com/index.php?id_category=4&controller=category']")
 	WebElement btn_Tops;
 	@FindBy(css = "h5 [href='http://automationpractice.com/index.php?id_category=8&controller=category']")

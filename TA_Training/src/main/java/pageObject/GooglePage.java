@@ -31,6 +31,7 @@ public class GooglePage {
 		driver.get(FileReaderManager.getInstance().getConfigReader().getGoogleUrl());
 	}
 
+	// now it throws nothing :P
 	public void acceptCookies() throws InterruptedException, AWTException {
 //		Thread.sleep(2000);
 //		Robot robot = new Robot();

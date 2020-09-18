@@ -45,6 +45,10 @@ public class Wait {
 	@SuppressWarnings("deprecation")
 	private static void until(WebDriver driver, Function<WebDriver, Boolean> waitCondition, Long timeoutInSeconds) {
 		WebDriverWait webDriverWait = new WebDriverWait(driver, timeoutInSeconds);
+		
+		// to avoid deprecation use:
+		// webDriverWait.withTimeout(Duration.ofSeconds(timeoutInSeconds));
+		
 		webDriverWait.withTimeout(timeoutInSeconds, TimeUnit.SECONDS);
 		try {
 			webDriverWait.until(waitCondition);

@@ -87,17 +87,16 @@ public class CreateAnAccountPage {
 	public void enter_Password() {
 		txtbx_Password.sendKeys("Password");
 	}
-
+	// how about setting value of any dropdown - e.g select_Days(int day){ day.selectByIndex(day); }
+	// this refers to all methods
 	public void select_Days() {
 		Select day = new Select(drpdwn_Days);
 		day.selectByIndex(1);
 	}
-
 	public void select_Months() {
 		Select month = new Select(drpdwn_Months);
 		month.selectByIndex(1);
 	}
-
 	public void select_Years() {
 		Select year = new Select(drpdwn_Years);
 		year.selectByIndex(1);
@@ -168,7 +167,8 @@ public class CreateAnAccountPage {
 	public void click_Register() {
 		btn_Register.click();
 	}
-
+	// how about setting value of any dropdown - e.g select_Days(int day){ day.selectByIndex(day); }
+	// this refers to all methods
 	public void fillAllInformation() {
 		select_Mr();
 		enter_FirstName();

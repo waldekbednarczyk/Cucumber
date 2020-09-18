@@ -53,6 +53,7 @@ public class HomePage {
 	WebElement btn_GooglePlus;
 	@FindBy(css = "[href='http://automationpractice.com/index.php?id_category=3&controller=category'][title='Women']")
 	WebElement btn_Women;
+	// i think that these xpaths could be simpler ;)
 	@FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[1]/div[1]/div[1]/a[1]/img[1]")
 	WebElement pic_Blouse;
 	@FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[1]/div[2]/div[2]/a[1]/span[1]")
@@ -77,6 +78,7 @@ public class HomePage {
 	List<WebElement> allSiteIDs;
 	@FindAll(@FindBy(css = ".fancybox [itemprop='image']"))
 	List<WebElement> allThumbImages;
+	// i think that this xpath could be simpler ;)
 	@FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[1]/div[1]/div[1]/a[2]/span[1]")
 	WebElement btn_BlouseQuickView;
 

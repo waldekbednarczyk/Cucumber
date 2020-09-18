@@ -44,6 +44,8 @@ public class ContactUsPage {
 	}
 
 	public void enter_AttachFile() {
+		// use relative path
+		// what if we want to attach different file?
 		txtbx_AttachFile.sendKeys(
 				"C:\\Users\\p_smandzich\\Desktop\\Cucumber\\TA_Training\\src\\test\\resources\\files\\contactUs.txt");
 	}

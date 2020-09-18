@@ -20,6 +20,7 @@ public class ShoppingCartSummaryPage {
 	WebElement btn_Minus;
 	@FindBy(css = ".icon-plus")
 	WebElement btn_Plus;
+	// I had the same solution, but what if there will be multiple or other products?
 	@FindBy(id = "total_product_price_2_7_0")
 	WebElement totalBlousePrice;
 
